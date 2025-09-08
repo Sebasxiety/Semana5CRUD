@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD39A708-7038-89AF-0D9B-A3A78A81E346}|..\\AngularProject1\\AngularProject1.esproj|c:\\users\\mayerli\\desktop\\proyectoschi\\dela\\semana5crud\\angularproject1\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|c:\\users\\mayerli\\desktop\\proyectoschi\\dela\\semana5crud\\backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|c:\\users\\mayerli\\desktop\\proyectoschi\\dela\\semana5crud\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|c:\\users\\mayerli\\desktop\\proyectoschi\\dela\\semana5crud\\backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|c:\\users\\mayerli\\desktop\\proyectoschi\\dela\\semana5crud\\backend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B39CB6C-787F-49B1-8C38-9544381E9443}|backend.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\AngularProject1\\src\\index.html",
+              "RelativeDocumentMoniker": "..\\AngularProject1\\src\\index.html",
+              "ToolTip": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\AngularProject1\\src\\index.html",
+              "RelativeToolTip": "..\\AngularProject1\\src\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-07T08:51:11.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-07T08:51:04.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T08:50:57.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T08:50:55.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-07T08:50:24.06Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
