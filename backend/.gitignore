@@ -1,0 +1,142 @@
+# =========================
+# ASP.NET Core / .NET
+# =========================
+bin/
+obj/
+artifacts/
+[Bb]uild/
+*.pdb
+*.cache
+*.ilk
+
+# Archivos de proyecto antiguos
+project.lock.json
+project.fragment.lock.json
+
+# launchSettings es local de desarrollo
+**/Properties/launchSettings.json
+
+# =========================
+# Configuración y secretos
+# (ajústalo a tu política: normalmente se versiona appsettings.json,
+# pero se IGNORAN variantes locales y secretos)
+# =========================
+appsettings.*.local.json
+*.secret.json
+secrets.json
+
+# Certificados locales
+*.pfx
+*.p12
+*.cer
+
+# =========================
+# Logs y cobertura
+# =========================
+*.log
+logs/
+Log/
+TestResults/
+testresults/
+*.coverage
+*.coveragexml
+coverage/
+
+# =========================
+# IDEs
+# =========================
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.opendb
+*.VC.db
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# VS Code (mantén recomendaciones opcionalmente)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# =========================
+# Paquetes / NuGet
+# =========================
+*.nupkg
+*.snupkg
+packages/
+.nuget/NuGet.Config
+.nuget/packages/
+
+# =========================
+# Web / Frontend
+# =========================
+# Librerías descargadas (LibMan / bundlers)
+wwwroot/lib/
+wwwroot/dist/
+wwwroot/build/
+# SPA / Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Publicación / Azure
+# =========================
+**/Properties/PublishProfiles/*.pubxml
+**/Properties/PublishProfiles/*.pubxml.user
+*.azurePubxml
+csx/
+*.build.csdef
+
+# =========================
+# Docker
+# =========================
+.docker/
+docker-compose.*.override.yml
+**/*.Dockerfile.user
+
+# =========================
+# Bases de datos locales
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+
+# =========================
+# SO
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux/otros
+*.swp
+*.swo
+
+# =========================
+# Misceláneo
+# =========================
+# Mantén estos en repo si los usas
+!.editorconfig
+!.gitattributes
