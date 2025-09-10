@@ -88,10 +88,13 @@ Una vez que hayas obtenido un token JWT, puedes usarlo para acceder a los endpoi
 
 ## 5. Postman
 <img width="886" height="421" alt="image" src="https://github.com/user-attachments/assets/7b5c2ecc-e111-4cc7-bd2d-659aeabed122" />
-**Sin Token:**
+
+### **Sin Token:**
+
 <img width="886" height="362" alt="image" src="https://github.com/user-attachments/assets/5f7f7583-7eb3-45c5-8dae-c99b9ae8a2cf" />
 
-**Con Token:**
+### **Con Token:**
+ 
 <img width="886" height="349" alt="image" src="https://github.com/user-attachments/assets/bad86113-3a42-467a-b86e-0cee83505b8d" />
 
 
