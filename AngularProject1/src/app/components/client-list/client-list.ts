@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ClientListComponent implements OnInit { // Changed class name
   clients: Client[] = [];
   errorMessage: string | null = null;
+  loading: boolean = false;
 
   constructor(private clientService: ClientService, private router: Router) { }
 
@@ -19,12 +20,16 @@ export class ClientListComponent implements OnInit { // Changed class name
   }
 
   loadClients(): void {
+    this.loading = true;
+    this.errorMessage = null;
     this.clientService.getClients().subscribe({
       next: (data: Client[]) => { // Added type
         this.clients = data;
+        this.loading = false;
       },
       error: (err: any) => { // Added type
-        this.errorMessage = 'Failed to load clients.';
+        this.errorMessage = 'Error al cargar la lista de clientes.';
+        this.loading = false;
         console.error('Error loading clients:', err);
       }
     });
@@ -37,13 +42,13 @@ export class ClientListComponent implements OnInit { // Changed class name
   }
 
   deleteClient(id: number | undefined): void {
-    if (id && confirm('Are you sure you want to delete this client?')) {
+    if (id && confirm('¿Estás seguro de que quieres eliminar este cliente?')) {
       this.clientService.deleteClient(id).subscribe({
         next: () => {
           this.loadClients(); // Reload clients after deletion
         },
         error: (err: any) => { // Added type
-          this.errorMessage = 'Failed to delete client.';
+          this.errorMessage = 'Error al eliminar el cliente.';
           console.error('Error deleting client:', err);
         }
       });

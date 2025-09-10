@@ -1,1 +1,65 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <!-- Header/Navigation Bar -->
+  <nav class="navbar is-dark is-fixed-top" role="navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h1 class="title is-4 has-text-white">
+          <i class="fas fa-users-cog mr-2"></i>
+          Sistema de Gestión de Clientes
+        </h1>
+      </div>
+    </div>
+    
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <span class="has-text-light mr-3">
+            <i class="fas fa-user mr-1"></i>
+            Bienvenido, Admin
+          </span>
+          <button class="button is-danger is-small" (click)="logout()">
+            <i class="fas fa-sign-out-alt mr-1"></i>
+            Cerrar Sesión
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="columns is-fullheight">
+      <!-- Sidebar Navigation -->
+      <div class="column is-2 is-narrow-mobile is-fullheight sidebar">
+        <aside class="menu p-4">
+          <p class="menu-label has-text-weight-bold">
+            <i class="fas fa-tachometer-alt mr-2"></i>
+            Panel de Control
+          </p>
+          <ul class="menu-list">
+            <li>
+              <a routerLink="/dashboard/clients" routerLinkActive="is-active">
+                <i class="fas fa-users mr-2"></i>
+                Lista de Clientes
+              </a>
+            </li>
+            <li>
+              <a routerLink="/dashboard/clients/add" routerLinkActive="is-active">
+                <i class="fas fa-user-plus mr-2"></i>
+                Agregar Cliente
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Content Area -->
+      <div class="column">
+        <div class="container p-4">
+          <!-- Router Outlet para las rutas hijas -->
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

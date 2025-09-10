@@ -1,0 +1,25 @@
+.dashboard-container {
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-top: 3.25rem;
+}
+
+.sidebar {
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 3.25rem);
+}
+
+.menu-list a.is-active {
+  background-color: #3273dc;
+  color: white;
+}
+
+.menu-list a:hover {
+  background-color: #dbdbdb;
+}
+
+.menu-list a.is-active:hover {
+  background-color: #2366d1;
+}

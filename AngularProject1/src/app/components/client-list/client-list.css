@@ -1,0 +1,18 @@
+/* Estilos personalizados para la lista de clientes */
+
+/* Personalización adicional si es necesaria */
+.table th {
+  vertical-align: middle;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.buttons .button {
+  margin-right: 0.25rem;
+}
+
+.buttons .button:last-child {
+  margin-right: 0;
+}

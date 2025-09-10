@@ -1,1 +1,113 @@
-<p>client-list works!</p>
+<div class="client-list-container">
+  <!-- Header Section -->
+  <div class="level mb-5">
+    <div class="level-left">
+      <div class="level-item">
+        <div>
+          <h1 class="title is-3">
+            <i class="fas fa-users mr-2"></i>
+            Lista de Clientes
+          </h1>
+          <p class="subtitle is-6">Gestiona todos los clientes registrados</p>
+        </div>
+      </div>
+    </div>
+    <div class="level-right">
+      <div class="level-item">
+        <button class="button is-primary" routerLink="/dashboard/clients/add">
+          <i class="fas fa-user-plus mr-2"></i>
+          Agregar Cliente
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div class="notification is-danger" *ngIf="errorMessage">
+    <button type="button" class="delete" (click)="errorMessage = null" title="Cerrar mensaje de error"></button>
+    <i class="fas fa-exclamation-triangle mr-2"></i>
+    {{ errorMessage }}
+  </div>
+
+  <!-- Loading State -->
+  <div class="has-text-centered p-6" *ngIf="loading">
+    <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
+    <p class="is-size-5">Cargando clientes...</p>
+  </div>
+
+  <!-- Clients Table -->
+  <div class="card" *ngIf="clients.length > 0 && !loading">
+    <div class="card-content p-0">
+      <div class="table-container">
+        <table class="table is-fullwidth is-striped is-hoverable">
+          <thead>
+            <tr class="has-background-primary-light">
+              <th><i class="fas fa-id-card mr-1"></i>Cédula</th>
+              <th><i class="fas fa-user mr-1"></i>Nombres</th>
+              <th><i class="fas fa-user-tag mr-1"></i>Apellidos</th>
+              <th><i class="fas fa-map-marker-alt mr-1"></i>Dirección</th>
+              <th><i class="fas fa-phone mr-1"></i>Teléfono</th>
+              <th><i class="fas fa-cog mr-1"></i>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let client of clients">
+              <td class="has-text-weight-bold">{{ client.cedula }}</td>
+              <td>{{ client.nombres }}</td>
+              <td>{{ client.apellidos }}</td>
+              <td>
+                <span class="icon-text">
+                  <span class="icon is-small">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                  <span>{{ client.direccion }}</span>
+                </span>
+              </td>
+              <td>
+                <span class="icon-text">
+                  <span class="icon is-small">
+                    <i class="fas fa-phone"></i>
+                  </span>
+                  <span>{{ client.telefono }}</span>
+                </span>
+              </td>
+              <td>
+                <div class="buttons are-small">
+                  <button 
+                    class="button is-warning is-small" 
+                    [routerLink]="['/dashboard/clients/edit', client.id]"
+                    title="Editar cliente">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button 
+                    class="button is-danger is-small" 
+                    (click)="deleteClient(client.id!)"
+                    title="Eliminar cliente">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div class="hero is-light" *ngIf="clients.length === 0 && !loading && !errorMessage">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <i class="fas fa-users fa-4x has-text-grey-light mb-4"></i>
+        <h1 class="title is-4 has-text-grey">No hay clientes registrados</h1>
+        <h2 class="subtitle is-6 has-text-grey-dark">
+          Comienza agregando tu primer cliente al sistema
+        </h2>
+        <button class="button is-primary is-medium" routerLink="/dashboard/clients/add">
+          <i class="fas fa-user-plus mr-2"></i>
+          Agregar primer cliente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

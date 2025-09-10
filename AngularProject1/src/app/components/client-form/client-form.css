@@ -1,0 +1,49 @@
+/* Estilos personalizados para el formulario de clientes */
+
+/* Espaciado adicional para el formulario */
+.field:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo para campos obligatorios */
+.label::after {
+  content: "";
+}
+
+.label:has-text("*")::after {
+  content: " *";
+  color: #ff3860;
+}
+
+/* Animación para notificaciones */
+.notification {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejoras responsive para el formulario */
+@media screen and (max-width: 768px) {
+  .level {
+    display: block;
+  }
+  
+  .level-left,
+  .level-right {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .column.is-half {
+    width: 100%;
+  }
+}

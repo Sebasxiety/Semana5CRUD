@@ -1,1 +1,215 @@
-<p>client-form works!</p>
+<div class="client-form-container">
+  <!-- Header Section -->
+  <div class="level mb-5">
+    <div class="level-left">
+      <div class="level-item">
+        <div>
+          <h1 class="title is-3">
+            <i class="fas" [ngClass]="isEditMode ? 'fa-user-edit' : 'fa-user-plus'" class="mr-2"></i>
+            {{ isEditMode ? 'Editar Cliente' : 'Agregar Cliente' }}
+          </h1>
+          <p class="subtitle is-6">
+            {{ isEditMode ? 'Modifica los datos del cliente' : 'Completa la información del nuevo cliente' }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="level-right">
+      <div class="level-item">
+        <button class="button is-light" routerLink="/dashboard/clients">
+          <i class="fas fa-arrow-left mr-2"></i>
+          Volver a la lista
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div class="notification is-danger" *ngIf="errorMessage">
+    <button type="button" class="delete" (click)="errorMessage = null" title="Cerrar mensaje de error"></button>
+    <i class="fas fa-exclamation-triangle mr-2"></i>
+    {{ errorMessage }}
+  </div>
+
+  <!-- Success Message -->
+  <div class="notification is-success" *ngIf="successMessage">
+    <button type="button" class="delete" (click)="successMessage = null" title="Cerrar mensaje de éxito"></button>
+    <i class="fas fa-check-circle mr-2"></i>
+    {{ successMessage }}
+  </div>
+
+  <!-- Form Card -->
+  <div class="card">
+    <div class="card-header">
+      <p class="card-header-title">
+        <i class="fas fa-user-circle mr-2"></i>
+        Información del Cliente
+      </p>
+    </div>
+    <div class="card-content">
+      <form (ngSubmit)="onSubmit()" #clientForm="ngForm">
+        <div class="columns is-multiline">
+          <!-- Cédula -->
+          <div class="column is-half">
+            <div class="field">
+              <label class="label">
+                <i class="fas fa-id-card mr-1"></i>
+                Cédula *
+              </label>
+              <div class="control has-icons-left">
+                <input 
+                  class="input" 
+                  [class.is-danger]="cedula.invalid && cedula.touched"
+                  type="text" 
+                  name="cedula"
+                  [(ngModel)]="client.cedula" 
+                  #cedula="ngModel"
+                  required 
+                  placeholder="Ingrese la cédula"
+                  maxlength="20">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-id-card"></i>
+                </span>
+              </div>
+              <p class="help is-danger" *ngIf="cedula.invalid && cedula.touched">
+                La cédula es obligatoria
+              </p>
+            </div>
+          </div>
+
+          <!-- Nombres -->
+          <div class="column is-half">
+            <div class="field">
+              <label class="label">
+                <i class="fas fa-user mr-1"></i>
+                Nombres *
+              </label>
+              <div class="control has-icons-left">
+                <input 
+                  class="input" 
+                  [class.is-danger]="nombres.invalid && nombres.touched"
+                  type="text" 
+                  name="nombres"
+                  [(ngModel)]="client.nombres" 
+                  #nombres="ngModel"
+                  required 
+                  placeholder="Ingrese los nombres"
+                  maxlength="50">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <p class="help is-danger" *ngIf="nombres.invalid && nombres.touched">
+                Los nombres son obligatorios
+              </p>
+            </div>
+          </div>
+
+          <!-- Apellidos -->
+          <div class="column is-half">
+            <div class="field">
+              <label class="label">
+                <i class="fas fa-user-tag mr-1"></i>
+                Apellidos *
+              </label>
+              <div class="control has-icons-left">
+                <input 
+                  class="input" 
+                  [class.is-danger]="apellidos.invalid && apellidos.touched"
+                  type="text" 
+                  name="apellidos"
+                  [(ngModel)]="client.apellidos" 
+                  #apellidos="ngModel"
+                  required 
+                  placeholder="Ingrese los apellidos"
+                  maxlength="50">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user-tag"></i>
+                </span>
+              </div>
+              <p class="help is-danger" *ngIf="apellidos.invalid && apellidos.touched">
+                Los apellidos son obligatorios
+              </p>
+            </div>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="column is-half">
+            <div class="field">
+              <label class="label">
+                <i class="fas fa-phone mr-1"></i>
+                Teléfono *
+              </label>
+              <div class="control has-icons-left">
+                <input 
+                  class="input" 
+                  [class.is-danger]="telefono.invalid && telefono.touched"
+                  type="tel" 
+                  name="telefono"
+                  [(ngModel)]="client.telefono" 
+                  #telefono="ngModel"
+                  required 
+                  placeholder="Ingrese el teléfono"
+                  maxlength="15">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-phone"></i>
+                </span>
+              </div>
+              <p class="help is-danger" *ngIf="telefono.invalid && telefono.touched">
+                El teléfono es obligatorio
+              </p>
+            </div>
+          </div>
+
+          <!-- Dirección -->
+          <div class="column is-full">
+            <div class="field">
+              <label class="label">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                Dirección *
+              </label>
+              <div class="control has-icons-left">
+                <textarea 
+                  class="textarea" 
+                  [class.is-danger]="direccion.invalid && direccion.touched"
+                  name="direccion"
+                  [(ngModel)]="client.direccion" 
+                  #direccion="ngModel"
+                  required 
+                  placeholder="Ingrese la dirección completa"
+                  rows="3"
+                  maxlength="200"></textarea>
+              </div>
+              <p class="help is-danger" *ngIf="direccion.invalid && direccion.touched">
+                La dirección es obligatoria
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="field is-grouped is-grouped-right mt-5">
+          <div class="control">
+            <button 
+              type="button" 
+              class="button is-light" 
+              routerLink="/dashboard/clients">
+              <i class="fas fa-times mr-2"></i>
+              Cancelar
+            </button>
+          </div>
+          <div class="control">
+            <button 
+              type="submit" 
+              class="button is-primary" 
+              [class.is-loading]="loading"
+              [disabled]="clientForm.invalid || loading">
+              <i class="fas" [ngClass]="isEditMode ? 'fa-save' : 'fa-plus'" class="mr-2" *ngIf="!loading"></i>
+              {{ isEditMode ? 'Actualizar Cliente' : 'Crear Cliente' }}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
