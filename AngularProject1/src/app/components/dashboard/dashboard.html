@@ -1,26 +1,34 @@
 <div class="dashboard-container">
   <!-- Header/Navigation Bar -->
-  <nav class="navbar is-dark is-fixed-top" role="navigation">
+  <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <div class="navbar-item">
+      <a class="navbar-item" href="#">
         <h1 class="title is-4 has-text-white">
           <i class="fas fa-users-cog mr-2"></i>
           Sistema de Gestión de Clientes
         </h1>
-      </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-    
-    <div class="navbar-menu">
+
+    <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
           <span class="has-text-light mr-3">
             <i class="fas fa-user mr-1"></i>
             Bienvenido, Admin
           </span>
-          <button class="button is-danger is-small" (click)="logout()">
-            <i class="fas fa-sign-out-alt mr-1"></i>
-            Cerrar Sesión
-          </button>
+          <div class="buttons">
+            <button class="button is-danger is-small" (click)="logout()">
+              <i class="fas fa-sign-out-alt mr-1"></i>
+              Cerrar Sesión
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -28,9 +36,9 @@
 
   <!-- Main Content Area -->
   <div class="main-content">
-    <div class="columns is-fullheight">
+    <div class="columns is-fullheight is-marginless">
       <!-- Sidebar Navigation -->
-      <div class="column is-2 is-narrow-mobile is-fullheight sidebar">
+      <div class="column is-2-desktop is-3-tablet is-hidden-mobile sidebar">
         <aside class="menu p-4">
           <p class="menu-label has-text-weight-bold">
             <i class="fas fa-tachometer-alt mr-2"></i>
@@ -38,13 +46,13 @@
           </p>
           <ul class="menu-list">
             <li>
-              <a routerLink="/dashboard/clients" routerLinkActive="is-active">
+              <a routerLink="/dashboard/clients" routerLinkActive="is-active" class="has-text-dark">
                 <i class="fas fa-users mr-2"></i>
                 Lista de Clientes
               </a>
             </li>
             <li>
-              <a routerLink="/dashboard/clients/add" routerLinkActive="is-active">
+              <a routerLink="/dashboard/clients/add" routerLinkActive="is-active" class="has-text-dark">
                 <i class="fas fa-user-plus mr-2"></i>
                 Agregar Cliente
               </a>
@@ -54,10 +62,20 @@
       </div>
 
       <!-- Content Area -->
-      <div class="column">
-        <div class="container p-4">
+      <div class="column content-area">
+        <div class="container is-fluid px-4 py-3">
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb mb-4" aria-label="breadcrumbs">
+            <ul>
+              <li><a href="#" routerLink="/dashboard">Dashboard</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Clientes</a></li>
+            </ul>
+          </nav>
+
           <!-- Router Outlet para las rutas hijas -->
-          <router-outlet></router-outlet>
+          <div class="content-wrapper">
+            <router-outlet></router-outlet>
+          </div>
         </div>
       </div>
     </div>

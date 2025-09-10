@@ -1,12 +1,57 @@
 /* Estilos personalizados para la lista de clientes */
 
-/* Personalización adicional si es necesaria */
+.client-list-container {
+  padding-top: 1rem;
+}
+
+.section {
+  padding: 1.5rem 0;
+}
+
+.level {
+  margin-bottom: 2rem;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title-container .title {
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+}
+
+.title-container .subtitle {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.4;
+}
+
+.notification {
+  margin-bottom: 1rem;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .table th {
   vertical-align: middle;
+  font-weight: 600;
+  border-bottom: 2px solid #dbdbdb;
 }
 
 .table td {
   vertical-align: middle;
+  padding: 1rem 0.75rem;
+}
+
+.table-container {
+  overflow-x: auto;
 }
 
 .buttons .button {
@@ -15,4 +60,54 @@
 
 .buttons .button:last-child {
   margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .level {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .level-right {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .level-right .level-item {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+  }
+
+  .table-container {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+
+  .title {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Loading animation */
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Table hover effects */
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Button hover effects */
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
 }

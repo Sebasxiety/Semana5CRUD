@@ -1,29 +1,33 @@
 <div class="client-list-container">
   <!-- Header Section -->
-  <div class="level mb-5">
-    <div class="level-left">
-      <div class="level-item">
-        <div>
-          <h1 class="title is-3">
-            <i class="fas fa-users mr-2"></i>
-            Lista de Clientes
-          </h1>
-          <p class="subtitle is-6">Gestiona todos los clientes registrados</p>
+  <div class="section pt-4 pb-4">
+  <div class="level mb-5 is-vcentered">
+      <div class="level-left">
+        <div class="level-item">
+          <div class="title-container">
+            <h1 class="title is-3 has-text-primary mb-2">
+              <i class="fas fa-users mr-2"></i>
+              Lista de Clientes
+            </h1>
+            <p class="subtitle is-6 has-text-grey mt-1 mb-0">
+              Gestiona todos los clientes registrados
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="level-right">
-      <div class="level-item">
-        <button class="button is-primary" routerLink="/dashboard/clients/add">
-          <i class="fas fa-user-plus mr-2"></i>
-          Agregar Cliente
-        </button>
+      <div class="level-right">
+        <div class="level-item">
+          <button class="button is-primary" routerLink="/dashboard/clients/add">
+            <i class="fas fa-user-plus mr-2"></i>
+            Agregar Cliente
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Error Message -->
-  <div class="notification is-danger" *ngIf="errorMessage">
+  <div class="notification is-danger mb-4" *ngIf="errorMessage">
     <button type="button" class="delete" (click)="errorMessage = null" title="Cerrar mensaje de error"></button>
     <i class="fas fa-exclamation-triangle mr-2"></i>
     {{ errorMessage }}

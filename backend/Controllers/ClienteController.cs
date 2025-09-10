@@ -26,7 +26,7 @@ namespace backend.Controllers
 
         // GET: /Cliente/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Cliente>> GetCliente(string id)
+        public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
             var cliente = await _context.Clientes.FindAsync(id);
 
@@ -45,14 +45,14 @@ namespace backend.Controllers
             _context.Clientes.Add(cliente);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetCliente), new { id = cliente.Cedula }, cliente);
+            return CreatedAtAction(nameof(GetCliente), new { id = cliente.Id }, cliente);
         }
 
         // PUT: /Cliente/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCliente(string id, Cliente cliente)
+        public async Task<IActionResult> PutCliente(int id, Cliente cliente)
         {
-            if (id != cliente.Cedula)
+            if (id != cliente.Id)
             {
                 return BadRequest();
             }
@@ -80,7 +80,7 @@ namespace backend.Controllers
 
         // DELETE: /Cliente/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCliente(string id)
+        public async Task<IActionResult> DeleteCliente(int id)
         {
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente == null)
@@ -94,9 +94,9 @@ namespace backend.Controllers
             return NoContent();
         }
 
-        private bool ClienteExists(string id)
+        private bool ClienteExists(int id)
         {
-            return _context.Clientes.Any(e => e.Cedula == id);
+            return _context.Clientes.Any(e => e.Id == id);
         }
     }
 }

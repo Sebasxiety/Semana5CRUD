@@ -46,4 +46,11 @@
   .column.is-half {
     width: 100%;
   }
+  
+/* Ajustes de espaciado para título del formulario */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 }
