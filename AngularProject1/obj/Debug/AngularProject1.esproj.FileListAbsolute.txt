@@ -1,1 +1,2 @@
 C:\Users\Mayerli\Desktop\ProyectosChi\Dela\Semana5CRUD\AngularProject1\obj\Debug\AngularProject1.esproj.CoreCompileInputs.cache
+C:\Users\Alex2\Documents\Trabajos\Programacion\Csharp\Dela\Semana5CRUD\AngularProject1\obj\Debug\AngularProject1.esproj.CoreCompileInputs.cache

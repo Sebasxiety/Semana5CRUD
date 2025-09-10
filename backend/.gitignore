@@ -140,3 +140,7 @@ Desktop.ini
 # Mantén estos en repo si los usas
 !.editorconfig
 !.gitattributes
+
+
+# Archivo de variables 
+.env

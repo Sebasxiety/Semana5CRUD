@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\backend.csproj": {}
+    "C:\\Users\\Alex2\\Documents\\Trabajos\\Programacion\\Csharp\\Dela\\Semana5CRUD\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\backend.csproj": {
+    "C:\\Users\\Alex2\\Documents\\Trabajos\\Programacion\\Csharp\\Dela\\Semana5CRUD\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\Alex2\\Documents\\Trabajos\\Programacion\\Csharp\\Dela\\Semana5CRUD\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\Mayerli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mayerli\\Desktop\\ProyectosChi\\Dela\\Semana5CRUD\\backend\\obj\\",
+        "projectPath": "C:\\Users\\Alex2\\Documents\\Trabajos\\Programacion\\Csharp\\Dela\\Semana5CRUD\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Alex2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alex2\\Documents\\Trabajos\\Programacion\\Csharp\\Dela\\Semana5CRUD\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mayerli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alex2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,6 +25,7 @@
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,15 +44,33 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.9, )"
             }
           },
           "imports": [
@@ -73,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
